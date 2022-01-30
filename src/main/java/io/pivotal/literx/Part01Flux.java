@@ -51,9 +51,7 @@ public class Part01Flux {
 		// TODO Create a Flux that emits increasing values from 0 to 9 each 100ms
 	Flux<Long> counter() {
 		Duration period = Duration.of(100L, ChronoUnit.MILLIS);
-		//return Flux.interval(period).take(10L);
-
-		return Flux.just(0L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L);
+		return Flux.interval(period).take(10L);
 	}
 
 }
